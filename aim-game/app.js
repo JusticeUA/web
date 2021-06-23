@@ -5,7 +5,7 @@ const timeEl = document.querySelector('#time')
 const board =document.querySelector('#board')
 const colors = ['red', '#008080', 'yellow', 'Wheat', 'orange', 'LawnGreen', 'pink', 'silver', 'gold','broun', 'purple', 'FireBrick','HotPink','LightSalmon','Chocolate','Gray']
 const live = document.querySelector('#live')
-// const reload = document.querySelector('#reload')
+ const reload = document.querySelector('#reload')
 
 let lives = 3
 let time = 0
@@ -24,11 +24,14 @@ timeList.addEventListener('click', event => {
    }
 })
 
-// reload.addEventListener('click', event => {
-//     screens[2].classList.remove('up')
-//     screens[2].classList.add('down')
+//  reload.addEventListener('click', event => {
     
-// })
+//     screens[1].classList.remove('up')
+//      screens[2].classList.add('down')
+//     //  screens[0].classList.remove('up')
+//     //  screens[1].classList.add('down')
+    
+//  })
 
 board.addEventListener('click', event => {
     if (event.target.classList.contains('circle')) {
@@ -66,7 +69,7 @@ function setTime (value){
 
 function finishGame(){
     board.innerHTML = `<h1>Cчет: <span class="primary"> ${score}</span></h1>`
-    // reload.innerHTML = '<button id="reload">играть еще</button>'
+    reload.innerHTML = '<button id="reload">играть еще(треба доробити=) поки що тільки F5</button>'
     timeEl.parentNode.classList.add('hide')
     live.parentNode.classList.add('hide')
 }
