@@ -5,7 +5,7 @@ let a1 = document.querySelector('.a1')
 h1.innerHTML = '<h1 style="color: red;">GOOD</h1>'
 
 document.querySelector('.h1 h2').innerHTML = 'very bed'
-h3.textContent = 'cool'
+h3.textContent = 'cool!'
 
 let input = document.querySelector('.main-container input')
 let button = document.querySelector('.main-container button')
