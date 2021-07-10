@@ -82,6 +82,6 @@ document.querySelector('.text').addEventListener('click', function(event){
     }
 
     if (event.target.classList.contains('color')){
-        event.target.style.color = 'red'
+        event.target.style.color = 'green'
     }
 })
