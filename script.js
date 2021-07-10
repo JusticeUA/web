@@ -5,6 +5,8 @@ let box1 = document.querySelector('.box')
 let p1 = document.querySelector('.p1')
 let p2 = document.querySelector('.p2')
 
+let bigBox = document.querySelectorAll('.bigBox')
+
 h1.innerHTML = '<h1 style="color: red;">GOOD</h1>'
 
 document.querySelector('.h1 h2').innerHTML = 'very bed'
@@ -29,6 +31,7 @@ button2.addEventListener('click', event => {
 } )
 p1.addEventListener('mouseenter', function (){
     this.style.color='yellow'
+    this.style.backgroundColor = 'black'
 })
 
 p2.addEventListener('mouseenter', q => {
@@ -36,6 +39,7 @@ p2.addEventListener('mouseenter', q => {
 })
 p1.addEventListener('mouseleave', function () {
     this.style.color = 'black'
+    this.style.backgroundColor = 'transparent'
 })
 p2.addEventListener('mouseleave', q => {
     p2.classList.remove('green')
@@ -43,3 +47,9 @@ p2.addEventListener('mouseleave', q => {
 
 
 console.log(input.attributes);
+
+for (let i = 0; i<bigBox.length; i++){
+    bigBox[i].addEventListener('click', function(){
+        console.log(this.getAttribute('id'));
+    }, true)
+}

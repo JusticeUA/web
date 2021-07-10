@@ -19,3 +19,17 @@
 .green {
     background-color: green;
 }
+.box-big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(74, 141, 91);
+}
+
+.box-medium {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(40, 162, 199);
+}
