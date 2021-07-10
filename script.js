@@ -4,7 +4,7 @@ let a1 = document.querySelector('.a1')
 let box1 = document.querySelector('.box')
 let p1 = document.querySelector('.p1')
 let p2 = document.querySelector('.p2')
-
+let link = document.querySelector('.google')
 let bigBox = document.querySelectorAll('.bigBox')
 
 h1.innerHTML = '<h1 style="color: red;">GOOD</h1>'
@@ -49,7 +49,28 @@ p2.addEventListener('mouseleave', q => {
 console.log(input.attributes);
 
 for (let i = 0; i<bigBox.length; i++){
-    bigBox[i].addEventListener('click', function(){
+    bigBox[i].addEventListener('click', function(event){
+        event.stopPropagation()
         console.log(this.getAttribute('id'));
-    }, true)
+    })
 }
+
+link.addEventListener('click', changeLink)
+
+function changeLink(event){
+     event.preventDefault()
+    // event.target.href = 'https://google.com'
+    // event.target.href = 'https://instagram.com'
+    console.log(event);
+    let mybox = bigBox[0]
+
+    // if (mybox.style.display === 'none'){
+    //     mybox.style.display = 'flex'
+    // } else {
+    //     mybox.style.display = 'none'
+    // } то шо нижче це то саме)
+    mybox.style.display = mybox.style.display === 'none'
+    ? 'flex'
+    : 'none'
+}
+
