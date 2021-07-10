@@ -11,3 +11,11 @@
     height: 100px;
     border: 2px solid rgb(53, 236, 63);
 }
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
