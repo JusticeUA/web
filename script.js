@@ -74,3 +74,14 @@ function changeLink(event){
     : 'none'
 }
 
+document.querySelector('.text').addEventListener('click', function(event){
+    let tagName = event.target.tagName.toLowerCase()
+
+    if (tagName === 'p'){
+        event.target.style.color = 'blue'
+    }
+
+    if (event.target.classList.contains('color')){
+        event.target.style.color = 'red'
+    }
+})
