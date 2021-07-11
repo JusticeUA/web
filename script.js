@@ -85,3 +85,25 @@ document.querySelector('.text').addEventListener('click', function(event){
         event.target.style.color = 'green'
     }
 })
+
+
+let objArr = [
+    {name: 'Vasya', age: 30},
+    {name: 'Halya', age: 26},
+    {name: 'Ruslan', age: 22},
+    {name: 'Andriana', age: 22}
+]
+
+// let findAge = prompt('input age')
+
+// let foundPerson = objArr.find(function(person){
+//     return person.age === findAge
+// })
+
+// console.log(foundPerson);
+
+let oldArray = [1,2,3,4,5,6,7,8,9].filter(i => {
+    return i % 2 !== 0
+})
+
+console.log(oldArray);
