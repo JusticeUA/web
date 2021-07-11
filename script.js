@@ -106,4 +106,19 @@ let oldArray = [1,2,3,4,5,6,7,8,9].filter(i => {
     return i % 2 !== 0
 })
 
-console.log(oldArray);
+// console.log(oldArray);
+
+let array1 = '1,2,3,4,5,6,7,8,9'
+let array2 = array1.split(',')
+console.log(array2);
+array2.splice((array1.length),0,'10','11') 
+ console.log(array2);
+
+// let newArray = array1.concat()
+// console.log(newArray);
+
+let arrayToInt = array2.map(i => {
+    return i * 2
+})
+console.log(arrayToInt);
+
