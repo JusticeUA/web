@@ -122,3 +122,113 @@ let arrayToInt = array2.map(i => {
 })
 console.log(arrayToInt);
 
+let v1 = [1,2,3,4,5,6,7,8,9,11,13,15,17,20].filter(i => {
+    
+    return i % 2 !== 0
+}).map(i=>{
+    return i * 2 
+})
+console.log(v1);
+
+//local
+
+document.querySelector('.local button').addEventListener('click', event => {
+    let value = document.querySelector('.local input').value
+
+    let localObj = {
+        text: value
+    }
+
+    localStorage.setItem('headerText', JSON.stringify(localObj))
+})
+
+document.addEventListener('DOMContentLoaded', function() {
+    let localObj = {}
+    try{
+        let localObj = JSON.parse(localStorage.getItem('headerText'))
+    } catch(e){
+        
+    }
+
+   
+
+    if (localObj && localObj.text && localObj.text.trim()){
+        document.querySelector(".local h1").textContent = localObj.text
+    }
+   
+})
+
+
+function Car (name, year, color) {
+    this.name = name
+    this.year = year
+    this.color = color
+}
+
+let car1 = new Car("ford", 2009, "red")    
+let car2 = new Car("opel", 2019, "green")    
+let car3 = new Car("bmw", 2007, "black") 
+
+Car.prototype.getAge = function(){
+    return new Date().getFullYear() - this.year
+}
+
+console.log(car1);
+console.log(car2);
+console.log(car3);
+//////////////////////
+
+let daewoo = Object.create({
+    calculateDistancePerYear: function(){
+        Object.defineProperty(this, 'distancePerYear', {
+            value: Math.ceil(this.distance / this.age),
+            enumerable: true,
+            writable: false,
+            configurable: false
+        })
+    }
+}, {
+    name: {
+        value: "Daewoo",
+        enumerable: true,
+        writable: false,
+        configurable: false
+    },
+    model: {
+        value: "Lanos",
+        enumerable: true,
+        writable: false,
+        confirugable: false
+    },
+    year: {
+        value: 2006,
+        enumerable: true,
+        writable: false,
+        configurable: false
+    },
+    distance: {
+        value: 260000,
+        enumerable: true,
+        writable: true,
+        cpnfirugable: false
+    },
+    age: {
+        enumerable: true,
+        get: function(){
+            console.log("получем вік")
+            return new Date().getFullYear() - this.year
+        },
+        set: function(){
+            console.log("встановлюємо значення");
+        }
+    }
+})
+
+console.log(daewoo);
+
+for (let key in daewoo) {
+    if (daewoo.hasOwnProperty(key)){
+        console.log(key, daewoo[key]);
+    }
+    
+}
